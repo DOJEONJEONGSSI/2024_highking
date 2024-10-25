@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import com.future.my.board.service.BoardService;
 import com.future.my.board.vo.BoardVO;
@@ -25,6 +27,13 @@ public class BoardController {
 	@Autowired
 	BoardService boardService;
 
+    @Value("#{util['file.upload.path']}")
+    private String CURR_IMAGE_PATH;
+    
+    @Value("#{util['file.download.path']}")
+    private String WEB_PATH;
+    
+    
 	@RequestMapping("/boardView")
 	public String boardView(Model model) {
 
@@ -59,7 +68,7 @@ public class BoardController {
 	
 	@PostMapping("/boardWriteDo")
 	public String boardWriteDo(BoardVO board) throws Exception {
-		boardService.writeBoard(board);
+		boardService.boardimage(board, CURR_IMAGE_PATH, WEB_PATH);
 		return "redirect:/boardView";
 	}
 	
@@ -73,9 +82,23 @@ public class BoardController {
 	
 	@PostMapping("/boardEditDo")
 	public String boardEditDo(BoardVO board) throws Exception {
-		boardService.updateBoard(board);
+		String temp = boardService.boardimageUpdate(board, CURR_IMAGE_PATH, WEB_PATH);
 		return "redirect:/boardView";
 	}
+	
+	@RequestMapping("/boardDelete")
+	public String boardDelete(int boardNo) {
+		try {
+			boardService.deleteBoard(boardNo);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "redirect:";
+		}
+		
+		return "redirect:/boardView";
+	}
+	
+	
 	//@ResponseBody 객체를 json 데이터 형태로 리턴	
 	@ResponseBody
 	@PostMapping("/writeReplyDo") // @RequestBody 문자열  json데이터를 객체로 받음
@@ -113,5 +136,6 @@ public class BoardController {
 		e.printStackTrace();
 		return "errorView";
 	}
-	
+
+
 }

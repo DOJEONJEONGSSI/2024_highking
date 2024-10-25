@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a class="fw-medium" href="#">Your Site Name</a>, All Right Reserved.
+                &copy; <a class="fw-medium" href="#">Highking</a>, All Right Reserved.
             </div>
             <div class="col-md-6 text-center text-md-end">
-                Designed By <a class="fw-medium" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a
-                    class="fw-medium" href="https://themewagon.com">ThemeWagon</a>
+                Designed By <a class="fw-medium" href="https://htmlcodex.com">Jack</a><a
+                    class="fw-medium" href="https://themewagon.com"></a>
             </div>
         </div>
     </div>

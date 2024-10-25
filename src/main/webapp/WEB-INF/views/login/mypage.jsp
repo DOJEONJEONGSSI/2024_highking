@@ -11,7 +11,7 @@
     <div class="container-fluid px-0 mb-5">
         <section class="page-section" id="contact" style="margin-top: 150px">
             <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">mypage</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" style="padding-bottom: 3vh;">mypage</h2>
                 <div class="divider-custom text-center">
                     <c:if test="${sessionScope.login.profileImg == null}">
                         <img src="${pageContext.request.contextPath}/assets/img/non.png" id="myImage" class="rounded-circle img-thumbnail shadow-sm" width="200" style="cursor: pointer;">

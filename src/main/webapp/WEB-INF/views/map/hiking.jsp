@@ -172,7 +172,7 @@ body {
 				</div>
 
 				<ul>
-					<li tabindex="0" class="icon-dashboard"><span id="infoButton">정보</span>
+					<li tabindex="0" class="icon-dashboard"><span id="infoButton">소개</span>
 					</li>
 					<li tabindex="0" class="icon-users"><span id="reviewButton">리뷰</span>
 					</li>
