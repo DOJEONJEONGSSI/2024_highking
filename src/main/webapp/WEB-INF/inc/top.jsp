@@ -48,8 +48,8 @@
                             <div class="dropdown-menu bg-light rounded-0 m-0">
                                 <a href="${pageContext.request.contextPath}/hiking" class="dropdown-item">100대 명산</a>
                                 <a href="${pageContext.request.contextPath}/weather" class="dropdown-item">날씨</a>
-                                <a href="${pageContext.request.contextPath}/board" class="dropdown-item">고객센터</a>
-                                <a href="${pageContext.request.contextPath}/test" class="dropdown-item">테스트</a>
+                                <a href="${pageContext.request.contextPath}/board" class="dropdown-item">인증센터</a>
+                                <a href="${pageContext.request.contextPath}/test" class="dropdown-item">고객센터</a>
                             </div>
                         </div>
                         <c:if test="${sessionScope.login == null}">

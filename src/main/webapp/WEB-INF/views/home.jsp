@@ -28,9 +28,6 @@
                                         &nbsp;Happy ~ing &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                                         &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Good health</h1>
-                                    <!-- 텍스트 색상을 흰색으로 변경 -->
-                                    <a href="" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Explore
-                                        More</a>
                                 </div>
                             </div>
                         </div>

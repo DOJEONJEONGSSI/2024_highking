@@ -11,6 +11,7 @@
         SELECT mem_id
              , mem_email
              , mem_pw
+             , profile_img
         FROM members
         WHERE use_yn ='Y'
         AND   mem_id = #{memId}
